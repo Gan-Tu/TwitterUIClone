@@ -6,7 +6,7 @@ interface Props {
 }
 
 function Tweet({ tweet }: Props) {
-  return <div>{tweet.title}</div>;
+  return <div>{tweet.username}</div>;
 }
 
 export default Tweet;

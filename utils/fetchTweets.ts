@@ -1,14 +1,25 @@
 import { Tweet } from "../typings";
 
-export const fetchTweets = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+export const fetchUser = async (id: number) => {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
   const data = await res.json();
-  const tweets: Tweet[] = data.map((x: Tweet) => {
-    return {
-      ...x,
-      profileImg: `https://picsum.photos/id/${x.userId}/48`,
-      username: `User ${x.userId}`
-    };
-  });
-  return tweets.slice(0, 10);
+  return data;
+};
+
+export const fetchTweets = async () => {
+  const res = await fetch(
+    "https://jsonplaceholder.typicode.com/posts?_sort=title&_limit=10"
+  );
+  const data = await res.json();
+  let tweets: Tweet[] = [];
+  for (const tweet of data) {
+    const userData = await fetchUser(tweet.userId);
+    tweets.push({
+      ...tweet,
+      username: userData.username,
+      screenname: userData.name,
+      profileImg: `https://picsum.photos/id/${tweet.userId}/48`
+    });
+  }
+  return tweets;
 };

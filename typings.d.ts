@@ -3,6 +3,7 @@ export type DefaultProps = {
 };
 
 export type TweetBody = {
+  screenName: string;
   username: string;
   profileImg: string;
 };
