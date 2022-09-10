@@ -15,10 +15,12 @@ export const fetchTweets = async () => {
   for (const tweet of data) {
     const userData = await fetchUser(tweet.userId);
     tweets.push({
-      ...tweet,
+      id: tweet.id,
+      userId: tweet.userId,
+      text: tweet.body.charAt(0).toUpperCase() + tweet.title.substr(1),
       username: userData.username,
-      screenname: userData.name,
-      profileImg: `https://picsum.photos/id/${tweet.userId}/48`
+      screenName: userData.name,
+      profileImg: `https://picsum.photos/id/${tweet.id}/48`
     });
   }
   return tweets;

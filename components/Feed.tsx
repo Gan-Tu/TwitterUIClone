@@ -17,7 +17,7 @@ function Feed({ tweets }: Props) {
       </div>
       <TweetBox />
 
-      <div>
+      <div className="overflow-hidden">
         {tweets.map((tweet) => (
           <TweetComponent tweet={tweet} key={tweet.id} />
         ))}

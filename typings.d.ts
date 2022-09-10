@@ -2,16 +2,11 @@ export type DefaultProps = {
   className?: string;
 };
 
-export type TweetBody = {
+export type Tweet = {
+  id: number;
+  userId: number;
+  text: string;
   screenName: string;
   username: string;
   profileImg: string;
 };
-
-export interface Tweet extends TweetBody {
-  _type: "tweet";
-  id: number;
-  userId: number;
-  title: string;
-  body: string;
-}
