@@ -6,6 +6,7 @@ import {
   ChartBarIcon,
   PhotographIcon
 } from "./Icons";
+import toast from "react-hot-toast";
 
 function TweetBox() {
   const [input, setInput] = useState<string>("");
@@ -20,7 +21,13 @@ function TweetBox() {
       />
 
       <div className="flex flex-1 items-center pl-2 ">
-        <form className="flex flex-1 flex-col">
+        <form
+          className="flex flex-1 flex-col"
+          onSubmit={(e) => {
+            e.preventDefault();
+            toast.error("Tweet is not implemented yet.");
+          }}
+        >
           <input
             type="text"
             value={input}
