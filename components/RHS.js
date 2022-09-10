@@ -1,5 +1,6 @@
 import React from "react";
 import { SearchIcon } from "./Icons";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 function RHS() {
   return (
@@ -12,6 +13,11 @@ function RHS() {
           className="bg-transparent outline-none flex-1"
         />
       </div>
+      <TwitterTimelineEmbed
+        sourceType="profile"
+        screenName="elonmusk"
+        options={{ height: 400 }}
+      />
     </div>
   );
 }
