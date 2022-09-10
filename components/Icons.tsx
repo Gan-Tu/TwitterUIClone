@@ -1,5 +1,5 @@
 import React from "react";
-import { DefaultProps } from "./types";
+import { DefaultProps } from "../typings";
 
 export const BellIcon = ({ className }: DefaultProps) => {
   return (

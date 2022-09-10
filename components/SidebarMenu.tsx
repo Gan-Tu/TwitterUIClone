@@ -1,5 +1,5 @@
 import React from "react";
-import { DefaultProps } from "./types";
+import { DefaultProps } from "../typings";
 
 interface Props {
   Icon: ({ className }: DefaultProps) => JSX.Element;
