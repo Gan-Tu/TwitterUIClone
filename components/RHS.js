@@ -4,19 +4,20 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 function RHS() {
   return (
-    <div className="mt-2 px-2">
-      <div className="flex items-center space-x-2 bg-gray-100 rounded-full p-3">
+    <div className="col-span-2 mt-2 hidden space-y-3 lg:inline">
+      <div className="mx-2 flex items-center space-x-2 rounded-full bg-gray-100 p-3">
         <SearchIcon className="h-5 w-5 text-gray-400" />
         <input
           type="text"
           placeholder="Search Twitter"
-          className="bg-transparent outline-none flex-1"
+          className="flex-1 bg-transparent outline-none"
         />
       </div>
       <TwitterTimelineEmbed
         sourceType="profile"
         screenName="elonmusk"
-        options={{ height: 400 }}
+        autoHeight
+        noBorders
       />
     </div>
   );

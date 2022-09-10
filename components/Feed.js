@@ -3,10 +3,10 @@ import { RefreshIcon } from "./Icons";
 
 function Feed() {
   return (
-    <div>
-      <div className="flex flex-center justify-between">
-        <h1 className="text-xl font-bold p-5">Home</h1>
-        <RefreshIcon className="w-6 h-6 cursor-pointer mt-6 mr-5 text-twitter transition-all ease-out duration-500 hover:rotate-180 active:scale-125" />
+    <div className="col-span-7 border-x lg:col-span-5">
+      <div className="flex-center flex justify-between">
+        <h1 className="p-5 text-xl font-bold">Home</h1>
+        <RefreshIcon className="mt-6 mr-5 h-6 w-6 cursor-pointer text-twitter transition-all duration-500 ease-out hover:rotate-180 active:scale-125" />
       </div>
     </div>
   );

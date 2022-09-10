@@ -13,9 +13,9 @@ import SidebarMenu from "./SidebarMenu";
 
 function Sidebar() {
   return (
-    <div className="flex flex-col items-start">
+    <div className="col-span-2 flex flex-col items-center md:items-start">
       <img
-        className="h-10 w-10"
+        className="m-3 h-10 w-10"
         src="https://ra.ac.ae/wp-content/uploads/2020/01/logo-twitter-icon-symbol-0.png"
         alt="twitter"
       />
