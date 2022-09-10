@@ -1,5 +1,6 @@
 import React from "react";
 import { RefreshIcon } from "./Icons";
+import TweetBox from "./TweetBox";
 
 function Feed() {
   return (
@@ -8,6 +9,7 @@ function Feed() {
         <h1 className="p-5 text-xl font-bold">Home</h1>
         <RefreshIcon className="mt-6 mr-5 h-6 w-6 cursor-pointer text-twitter transition-all duration-500 ease-out hover:rotate-180 active:scale-125" />
       </div>
+      <TweetBox />
     </div>
   );
 }
