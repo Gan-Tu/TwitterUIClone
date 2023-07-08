@@ -16,7 +16,8 @@ const Home = ({ tweets }: Props) => {
   return (
     <div className="mx-auto max-h-screen overflow-hidden lg:max-w-6xl">
       <Head>
-        <title>Twitter 2.0</title>
+        <title>Twitter UI Clone</title>
+        <meta name="description" content="Twitter UI Clone" />
       </Head>
 
       <Toaster />
