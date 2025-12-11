@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Tweet } from "../typings";
+import type { Tweet } from "../typings";
 import TimeAgo from "react-timeago";
 import { HeartIcon, ShareIcon, CommentIcon, RetweetIcon } from "./Icons";
 import toast from "react-hot-toast";
@@ -27,10 +27,9 @@ function Tweet({ tweet }: Props) {
               @{tweet.username}
             </p>
 
-            <TimeAgo
-              className="text-sm text-gray-500"
-              date={`2022-08-${tweet.userId}`}
-            />
+            <span className="text-sm text-gray-500">
+              <TimeAgo date={`2022-08-${tweet.userId}`} />
+            </span>
           </div>
 
           <p className="py-1">{tweet.text}</p>
